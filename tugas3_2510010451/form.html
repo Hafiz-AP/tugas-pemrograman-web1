@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3 - Formulir Pendaftaran UKM</title>
+</head>
+<body>
+
+    <!-- Header & Navigasi Semantik -->
+    <header>
+        <h1>Portal Data & Formulir Mahasiswa</h1>
+        <nav>
+            <a href="data.html">Data Mahasiswa</a> | 
+            <a href="form.html">Formulir UKM</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Konten Utama Semantik -->
+    <main>
+        <section>
+            <h2>Formulir Pendaftaran UKM Pemrograman & Teknologi</h2>
+            <p>Silakan isi data diri Anda secara lengkap dan benar untuk bergabung dalam Unit Kegiatan Mahasiswa (UKM).</p>
+
+            <form action="#" method="post">
+                
+                <!-- Field 1: Nama Lengkap -->
+                <p>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" minlength="3" required>
+                </p>
+
+                <!-- Field 2: Email -->
+                <p>
+                    <label for="email">Email Kampus / Pribadi:</label><br>
+                    <input type="email" id="email" name="email" placeholder="contoh@uniska-bjm.ac.id" required>
+                </p>
+
+                <!-- Field 3: Password -->
+                <p>
+                    <label for="password">Kata Sandi Akun:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" minlength="8" required>
+                </p>
+
+                <!-- Field 4: Umur -->
+                <p>
+                    <label for="umur">Umur (Tahun):</label><br>
+                    <input type="number" id="umur" name="umur" min="17" max="60" placeholder="17-60" required>
+                </p>
+
+                <!-- Field 5: Tanggal Lahir -->
+                <p>
+                    <label for="tgl_lahir">Tanggal Lahir:</label><br>
+                    <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+                </p>
+
+                <!-- Field 6: Radio Button Jenis Kelamin dalam Fieldset -->
+                <fieldset>
+                    <legend>Jenis Kelamin</legend>
+                    <input type="radio" id="jk_l" name="jk" value="Laki-laki" required>
+                    <label for="jk_l">Laki-laki</label> &nbsp;
+                    <input type="radio" id="jk_p" name="jk" value="Perempuan">
+                    <label for="jk_p">Perempuan</label>
+                </fieldset>
+
+                <!-- Field 7: Select Divisi / Minat UKM -->
+                <p>
+                    <label for="divisi">Pilih Divisi UKM:</label><br>
+                    <select id="divisi" name="divisi" required>
+                        <option value="">-- Pilih Divisi --</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="network">Jaringan & Keamanan Cyber</option>
+                        <option value="design">UI/UX & Desain Grafis</option>
+                    </select>
+                </p>
+
+                <!-- Field 8: Checkbox Minat Peminatan -->
+                <p>
+                    <label>Peminatan Khusus (Boleh pilih lebih dari 1):</label><br>
+                    <input type="checkbox" id="minat1" name="minat" value="Frontend">
+                    <label for="minat1">Frontend Development</label><br>
+
+                    <input type="checkbox" id="minat2" name="minat" value="Backend">
+                    <label for="minat2">Backend Development</label><br>
+
+                    <input type="checkbox" id="minat3" name="minat" value="Database">
+                    <label for="minat3">Database Management</label>
+                </p>
+
+                <!-- Field 9: Textarea Alasan Bergabung -->
+                <p>
+                    <label for="alasan">Alasan Ingin Bergabung:</label><br>
+                    <textarea id="alasan" name="alasan" rows="4" cols="50" placeholder="Tuliskan motivasi Anda di sini..."></textarea>
+                </p>
+
+                <!-- Tombol Submit & Reset -->
+                <p>
+                    <button type="submit">Kirim Pendaftaran</button>
+                    <button type="reset">Batal / Reset</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer Semantik -->
+    <footer>
+        <p>&copy; 2026 &mdash; Muhammad Hafiz Ansyari Persada &nbsp;|&nbsp; Kelas 3A Teknik Informatika UNISKA</p>
+    </footer>
+
+</body>
+</html>
