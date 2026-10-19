@@ -1,0 +1,208 @@
+/* ==========================================
+   1. RESET & BOX-SIZING (Wajib Border-Box)
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8FAFC;
+    color: #1E293B;
+    /* Kompensasi padding agar konten tidak tertutup navbar fixed */
+    padding-top: 70px; 
+}
+
+/* ==========================================
+   2. NAVBAR FIXED (Position Fixed)
+   ========================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0F172A;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   3. KONTEN UTAMA & ELEMEN STICKY
+   ========================================== */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Elemen Sticky (Position Sticky) */
+.sticky-category {
+    position: sticky;
+    top: 70px; /* Menempel di bawah navbar */
+    background-color: #E2E8F0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.sticky-category h2 {
+    font-size: 18px;
+    color: #334155;
+}
+
+/* ==========================================
+   4. KARTU PRODUK (Box Model & Position Absolute)
+   ========================================== */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    position: relative; /* Jangkar untuk badge absolute */
+    background-color: #FFFFFF;
+    width: calc(25% - 15px);
+    min-width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Mencegah elemen keluar dari border-radius */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover Kartu Naik & Bayangan Menebal */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge Absolute di Pojok Kartu */
+.badge-new {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.badge-disc {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #DC2626;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+/* Gambar dengan Overflow Hidden */
+.card-img-wrapper {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-body h3 {
+    font-size: 16px;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #059669;
+    margin-bottom: 14px;
+}
+
+/* Tombol Beli */
+.btn-buy {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-buy:hover {
+    background-color: #1D4ED8;
+}
+
+/* ==========================================
+   5. FOOTER STYLING
+   ========================================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0F172A;
+    color: #94A3B8;
+    font-size: 13px;
+    margin-top: 40px;
+}
