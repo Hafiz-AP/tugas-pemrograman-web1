@@ -1,0 +1,170 @@
+/* ==========================================
+   1. RESET & ATURAN UMUM (Universal Selector)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   2. BODY & TIPOGRAFI UTAMA (Elemen Selector)
+   ========================================== */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.8;
+    color: #2D3748; /* Warna HEX 1: Teks Gelap Nyaman Dibaca */
+    background-color: #F7FAFC; /* Warna HEX 2: Latar Belakang Terang */
+    padding: 20px;
+}
+
+/* Limit lebar konten utama dan buat rata tengah */
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   3. HEADER & NAVIGASI (ID & Child Selector)
+   ========================================== */
+#main-header {
+    max-width: 720px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+    background-color: #1A365D; /* Warna HEX 3: Biru Gelap Utama */
+    color: #FFFFFF;
+    padding: 25px 20px;
+    border-radius: 8px;
+}
+
+/* Selector Elemen H1 & Letter Spacing + Text Transform */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #E2E8F0;
+    margin-bottom: 15px;
+}
+
+/* Child Selector (nav > a) */
+nav > a {
+    color: #63B3ED;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+/* Pseudo-class (:hover) */
+nav > a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   4. KONTEN ARTIKEL (Descendant Selector)
+   ========================================== */
+article h2 {
+    font-size: 24px;
+    color: #1A365D;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Descendant Selector (article p) */
+article p {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.meta-info {
+    font-size: 13px;
+    color: #718096;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 10px;
+    margin-bottom: 20px !important;
+}
+
+/* ==========================================
+   5. HIGHLIGHT & BLOCKQUOTE (Class Selector)
+   ========================================== */
+.highlight {
+    background-color: #FEFCBF; /* Latar Kuning Soft */
+    padding: 15px;
+    border-left: 4px solid #D69E2E;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #EDF2F7;
+    border-left: 5px solid #1A365D;
+    padding: 15px 20px;
+    margin: 20px 0;
+    color: #4A5568;
+}
+
+/* ==========================================
+   6. DAFTAR & TAUTAN (Pseudo-class Selector)
+   ========================================== */
+.benefits-section {
+    margin: 25px 0;
+}
+
+.benefits-section h3, .reference-box h3 {
+    font-size: 18px;
+    color: #2B6CB0;
+    margin-bottom: 12px;
+}
+
+.benefits-section ul, .reference-box ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Pseudo-class (:first-child) */
+.benefits-section ul li:first-child {
+    font-weight: 600;
+    color: #1A365D;
+}
+
+/* Pseudo-class (:nth-child) */
+.link-list li:nth-child(even) {
+    background-color: #F7FAFC;
+}
+
+.link-list a {
+    color: #2B6CB0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.link-list a:hover {
+    color: #C53030;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   7. FOOTER (Footer Styling)
+   ========================================== */
+footer {
+    max-width: 720px;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    font-size: 13px;
+    color: #718096;
+    padding: 15px 0;
+    border-top: 1px solid #E2E8F0;
+}
